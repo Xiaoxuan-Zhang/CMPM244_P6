@@ -122,8 +122,7 @@ def load_design(filename):
 
 
 def main(argv):
-    prog, filename = argv
-    # filename = 'map.txt'
+    prog, filename, extra = argv
     design = load_design(filename)
 
     master = Tk()
