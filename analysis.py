@@ -66,11 +66,11 @@ def inspect(results, pos, draw_line):
                     shortest_key = key
             path = results[pos][shortest_key]
             for i in range(len(path) - 1):
-                draw_line(path[i][0], path[i + 1][0])
+                draw_line(path[i][0], path[i + 1][0], None, route[i][1])
         elif sys.argv[2] == 'multiplepath':
             for key, route in results[pos].items():
                 for i in range(len(route) - 1):
-                    draw_line(route[i][0], route[i + 1][0])
+                    draw_line(route[i][0], route[i + 1][0], None, route[i][1])
     else:
         print('Unreachable position.')
 
